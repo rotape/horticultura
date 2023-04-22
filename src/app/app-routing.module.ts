@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CalendariComponent } from './calendari/calendari.component';
 
 const routes: Routes = [
-  {path: 'calendari', component: CalendariComponent}
+  { path: 'calendari', loadComponent: () => import('./calendari/calendari.component').then((m) => m.CalendariComponent) },
+  { path: 'fitoterapia', loadComponent: () => import('./fitoterapia/fitoterapia.component').then((m) => m.FitoterapiaComponent) }
 ];
 
 @NgModule({
