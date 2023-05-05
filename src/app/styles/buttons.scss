@@ -1,0 +1,31 @@
+.button {
+    &__large {
+       
+        width: 10rem;
+        border: solid 1px;
+        border-radius: 10px;
+        text-align: center;
+        padding: 0.8rem;
+        margin: 0 0.5rem;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        text-decoration: none;
+        &:hover {
+            background-color: rgb(150, 148, 148);
+            color: aliceblue;
+        }
+        &:focus{
+            background-color: rgb(190, 189, 189);
+            color: aliceblue;
+        }
+        &:visited{
+            color: aliceblue;
+            background-color: antiquewhite;
+        }
+        &:active {
+            color: aliceblue;
+            background-color: aquamarine;
+        }
+    }
+    
+}
