@@ -5,6 +5,7 @@ import { FitoterapyDialogComponent } from '../fitoterapy-dialog/fitoterapy-dialo
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ModalService } from '../services/modal/modal.service';
 import { Subscription } from 'rxjs';
+import { ModalComponent } from '../components/modal/modal.component';
 @Component({
   selector: 'app-fitoterapia',
   standalone: true,
@@ -28,7 +29,7 @@ export class FitoterapiaComponent {
   createModal() {
     console.log(this.entry);
     this.sub = this.modalService
-      .openModal(this.entry, 'Are you sure ?', 'click confirm or close')
+      .openModal(this.entry, 'Are you sure ?', 'click confirm or close', FitoterapyDialogComponent)
       .subscribe((v) => {
         console.log(v, 'HAAAA');
       });

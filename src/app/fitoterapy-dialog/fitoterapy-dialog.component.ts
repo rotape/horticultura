@@ -1,8 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Inject } from '@angular/core';
-import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { DialogData } from '../models/dialogData';
-import { ModalService } from '../services/modal/modal.service';
+import { Component } from '@angular/core';
 import { ModalComponent } from "../components/modal/modal.component";
 @Component({
     selector: 'app-fitoterapy-dialog',
