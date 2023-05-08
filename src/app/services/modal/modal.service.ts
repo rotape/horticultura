@@ -9,7 +9,7 @@ export class ModalService {
     private componentSubscriber!: Subject<string>;
     constructor() {}
 
-  openModal(entry: ViewContainerRef, modalTitle: string, modalBody: string, component: ComponentType<any>) {
+  openModal(entry: ViewContainerRef,component?: ComponentType<any>, modalTitle?: string, modalBody?: string ) {
 
     this.componentRef = entry.createComponent(ModalComponent);
     this.componentRef.instance.title = modalTitle;

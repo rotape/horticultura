@@ -1,7 +1,16 @@
-<p>fitoterapy-dialog works!</p>
-<div>
-    <div>
-        <h1> Modal Popup Example</h1>
-        <p>{{bodyText}}</p>
+
+
+<form [formGroup]="fitoterapyForm">
+    <label for="system-name">Nom del Sistema: </label>
+    <input id="system-name" type="text" formControlName="systemName" required>
+    <div formArrayName="plants">
+        <h2>Plantes</h2>
+        <button type="button" (click)="addPlant()">+ Afegeix una planta</button>
+
+        <div *ngFor="let plant of plants.controls; let i=index">
+            <!-- The repeated alias template -->
+            <label for="plant-{{ i }}">Planta:</label>
+            <input id="plant-{{ i }}" type="text" [formControlName]="i">
+          </div>
     </div>
-</div>
+</form>

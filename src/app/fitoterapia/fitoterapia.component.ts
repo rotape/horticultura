@@ -26,10 +26,9 @@ export class FitoterapiaComponent {
     this.fitoterapiaService.createFitotherapyCollection('fitoterapia');
   }
 
-  createModal() {
-    console.log(this.entry);
+  openCreatePlantModal() {
     this.sub = this.modalService
-      .openModal(this.entry, 'Are you sure ?', 'click confirm or close', FitoterapyDialogComponent)
+      .openModal(this.entry, FitoterapyDialogComponent)
       .subscribe((v) => {
         console.log(v, 'HAAAA');
       });
